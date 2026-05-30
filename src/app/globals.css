@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cinzel:wght@400;500;600&family=EB+Garamond:ital,wght@0,400;1,400&display=swap');
+
+:root {
+  --gold: #C9A84C;
+  --gold-light: #F0D080;
+  --gold-dim: #8B6914;
+  --saffron: #E8841A;
+  --saffron-light: #FFAD4A;
+  --maroon: #4A0E0E;
+  --maroon-mid: #7A1C1C;
+  --cream: #FDF8EE;
+  --cream-dark: #F0E6CC;
+  --deep: #0D0B07;
+  --deep2: #1A1408;
+  --text-gold: #F5D67A;
+  --text-cream: #F0E8D0;
+  --lotus: #C8638A;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--deep);
+  color: var(--text-cream);
+  font-family: 'EB Garamond', serif;
+  font-size: 18px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--deep); }
+::-webkit-scrollbar-thumb { background: var(--gold-dim); border-radius: 2px; }
+
+/* Clip-path buttons */
+.btn-clip { clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%); }
+
+/* Timeline animation */
+.tl-item {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.tl-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Glow effect */
+.glow-gold { box-shadow: 0 0 30px rgba(201, 168, 76, 0.3); }
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(201, 168, 76, 0.15);
+}
